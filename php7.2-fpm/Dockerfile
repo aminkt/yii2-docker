@@ -17,6 +17,7 @@ RUN apt-get update && apt-get install -yq --no-install-recommends \
     php7.2-intl \
     php7.2-curl \
     php7.2-gd \
+    php7.2-zip \
     php7.2-mbstring && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
