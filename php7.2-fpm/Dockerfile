@@ -8,7 +8,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 # Install dependency packages
 RUN apt-get update && apt-get install -yq --no-install-recommends \
     git \
-    zip unzip php7.0-zip \
+    zip unzip php7.2-zip \
     curl \
     ca-certificates \
     build-essential \
