@@ -32,9 +32,8 @@ RUN sed -i "s|;*listen\s*=\s*/run/php/php7.2-fpm.sock|listen = 9000|g" /etc/php/
 # Add working directory and copy files into that.
 RUN mkdir /app
 
-VOLUME /app
-WORKDIR /app
-COPY . /app
+#WORKDIR /app
+#COPY . /app
 
 # Start application installation by composer update command.
 RUN composer global require fxp/composer-asset-plugin
