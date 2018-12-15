@@ -7,6 +7,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 # Install dependency packages
 RUN apt-get update && apt-get install -yq --no-install-recommends \
+    apt-utils \
     git \
     zip unzip php7.2-zip \
     curl \
@@ -30,10 +31,7 @@ RUN sed -i "s|;*listen\s*=\s*/run/php/php7.2-fpm.sock|listen = 9000|g" /etc/php/
     sed -i "s|;*listen\s*=\s*/||g" /etc/php/7.2/fpm/php-fpm.conf
 
 # Add working directory and copy files into that.
-RUN mkdir /app
-
-#WORKDIR /app
-#COPY . /app
+WORKDIR /app
 
 # Start application installation by composer update command.
 RUN composer global require fxp/composer-asset-plugin
