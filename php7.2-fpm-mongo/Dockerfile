@@ -10,5 +10,5 @@ RUN apt-get update && apt-get install -yq --no-install-recommends \
 
 # Install mongodb driver
 RUN pecl install mongodb
-RUN echo "extension=mongodb.so" >> /etc/php/7.2/fpm/php.ini
+#RUN echo "extension=mongodb.so" >> /etc/php/7.2/fpm/php.ini
 #RUN echo "extension=mongodb.so" >> /etc/php/7.2/cli/php.ini
