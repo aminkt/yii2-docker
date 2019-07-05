@@ -33,6 +33,7 @@ RUN apk add --no-cache \
         php7-mbstring \
         php7-json \
         php7-phar \
+        php7-ctype \
         php7-zip && \
         rm -rf /var/cache/apk/*
 
