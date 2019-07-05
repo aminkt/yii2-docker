@@ -49,14 +49,6 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 # Start application installation by composer update command.
 #RUN composer global require fxp/composer-asset-plugin
 
-#RUN rc-update add nginx default
-RUN rc-update add php-fpm7 default && rc-service php-fpm7 restart
+RUN rc-update add php-fpm7 default
 
-#ENTRYPOINT   && /bin/bash
-
-# Define mountable directories.
-#VOLUME ["/etc/nginx/sites-enabled", "/etc/nginx/certs", "/etc/nginx/conf.d", "/var/log/nginx"]
-
-# Expose ports.
-#EXPOSE 80
-#EXPOSE 443
+#ENTRYPOINT  rc-service php-fpm7 restart && /bin/bash
