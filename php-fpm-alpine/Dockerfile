@@ -22,6 +22,9 @@ RUN apk update && apk add --no-cache \
         php$PHP_VERSION-redis \
         php$PHP_VERSION-zlib \
         php$PHP_VERSION-mysqli \
+        php$PHP_VERSION-pdo \
+        php$PHP_VERSION-pdo_sqlite \
+        php$PHP_VERSION-pdo_mysql \
         php$PHP_VERSION-intl \
         php$PHP_VERSION-curl \
         php$PHP_VERSION-gd \
@@ -33,6 +36,8 @@ RUN apk update && apk add --no-cache \
         php$PHP_VERSION-xmlwriter \
         php$PHP_VERSION-tokenizer \
         php$PHP_VERSION-ctype \
+        php$PHP_VERSION-apcu \
+        php$PHP_VERSION-fileinfo \
         php$PHP_VERSION-zip && \
         rm -rf /var/cache/apk/* && \
         # ensure www-data user exists
